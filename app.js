@@ -242,9 +242,64 @@ console.log("-----------------------------");
 const result1 = 'bar' && 'foo'; // 'foo'
 const result2 = false || 243; // 243
 const result3 = 42 && false; // false
-const result4 = myVar || 3000; // 3000
+// const result4 = myVar || 3000; // 3000
 
 console.log('result1:', result1);
 console.log('result2:', result2);
 console.log('result3:', result3);
-console.log('result4:', result4);
+// console.log('result4:', result4);
+
+console.log("-----------------------------");
+// Exercise 10
+// 1. SET LANGUAGE
+
+// Construct a single line of code that assigns a default value using the logical OR operator. This line should match the logic of the following statement: 
+
+// "LANG is equal to localLangConfig or the default value of English."
+
+const localLangConfig = null;  // Change to 'es', 'fr', etc., or keep it null
+
+// a. Create a variable called LANG
+// b. Assign LANG the value of localLangConfig or 'en' as a default
+
+// Your code here
+const LANG = localLangConfig || 'en';
+
+// Log the result
+console.log('Language setting:', LANG);
+
+// 2. SET WEBSITE THEME
+
+const userSavedTheme = null; // Change to 'dark', 'contrast', etc., or keep it null
+
+// a. Create a variable called USER_THEME
+// b. Assign USER_THEME the value of userSavedTheme or 'light' as a default
+
+// Your code here
+const USER_THEME = userSavedTheme || 'light';
+
+// Log the result
+console.log('User theme setting:', USER_THEME);
+
+console.log("-----------------------------");
+// const adventurer = {
+//   name: 'Alice',
+// };
+
+// let dog = adventurer.dog?.name;
+
+// console.log(dog); // undefined
+
+console.log("-----------------------------");
+// Exercise 11
+// Now check for `cat.age` on `adventurer`. See how it errors out? Use optional chaining in a console.log that it returns undefined instead.
+
+const adventurer = {
+  name: 'Alice',
+};
+
+// let catName = adventurer.name;
+let cat = adventurer.cat?.age;
+
+// console.log(catName); 
+console.log(cat);
